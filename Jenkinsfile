@@ -14,7 +14,7 @@ node{
     
       stage('Deploy') {     
             sshagent(['Tomcat-jenkins']) {
-               sh 'scp -o StrictHostKeyChecking=no target/demojavapipeline_rajni.war jenkins@35.193.54.220:/opt/tomcat/webapps'
+               sh 'scp -o StrictHostKeyChecking=no target/demojavapipeline_newuser.war jenkins@35.193.54.220:/opt/tomcat/webapps'
               
           }
          
