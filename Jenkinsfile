@@ -1,7 +1,7 @@
 node{
-      def mvnHome = tool name: 'maven 3.5.4', type: 'maven' 
+      def mvnHome = tool name: 'maven 3.6.1', type: 'maven' 
       stage('Checkout'){
-         git 'https://github.com/LovesCloud/java-tomcat-build-pipeline'
+         git 'https://github.com/pradeepb14/test-pipeline'
        
       }  
       stage('Build'){
@@ -13,8 +13,8 @@ node{
       }  
     
       stage('Deploy') {     
-          sshagent(['tomcatsshuser']) {
-               sh 'scp -o StrictHostKeyChecking=no target/demojavapipeline_newuser.war jenkins@35.193.54.220:/opt/tomcat/webapps'
+          sshagent(['Admincssindiaonline']) {
+               sh 'scp -o StrictHostKeyChecking=no target/demojavapipeline_newuser.war jenkins@3.106.56.70:/opt/apache-tomcat-8.5.45/webapps'
               
           }
          
